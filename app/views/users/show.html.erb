@@ -1,0 +1,14 @@
+<% if flash[:success] %>
+  <div class='flash_success'>
+    <%= flash[:success] %>
+  </div>
+<% end %>
+
+<h1 class='user-name'><%= @user.name %></h1>
+<h2 class='user-email'><%= @user.email %></h1>
+<h2>Badges:</h2>
+<ul>
+  <% @user.badges.each do |badge| %>
+    <li><%= badge.name %></li>
+  <% end %>
+</ul>
